@@ -1,0 +1,38 @@
+<div
+  class="mx-auto flex min-h-[76vh] max-w-5xl items-center justify-center px-4"
+>
+  <div class="w-full max-w-3xl text-center">
+    <h1 class="mb-8 font-serif text-9xl font-bold text-[#8f3b22]">
+      {{statusCode}}
+    </h1>
+
+    <h1
+      class="mb-4 font-serif text-4xl font-bold text-gray-800 sm:text-5xl"
+    >Oops! Something went wrong!</h1>
+
+    <div class="mb-8 text-lg text-gray-500">
+      <p class="mb-2 font-semibold uppercase">Details on the issue:</p>
+      <p class="text-sm italic font-semibold uppercase">"{{errorMessage}}"</p>
+    </div>
+
+    <div
+      class="mb-8 rounded-xl border border-gray-200 bg-gray-50/50 p-6 text-left shadow-sm"
+    >
+      <h3 class="mb-4 font-serif text-xl font-bold">Here's what you can do:</h3>
+      <ul class="space-y-2 text-gray-600">
+        <li class="flex items-center gap-2">✓ Check if the URL is correct</li>
+        <li class="flex items-center gap-2">✓ Visit our homepage</li>
+        <li class="flex items-center gap-2">✓ Contact support if you need help</li>
+      </ul>
+    </div>
+
+    <div class="flex gap-4 justify-center">
+      <a
+        href="/"
+        class="inline-block rounded-lg border-2 border-[#bb5a3c] px-6 py-3 text-[#bb5a3c] transition hover:bg-[#bb5a3c] hover:text-white"
+      >
+        ← Go Back to Homepage
+      </a>
+    </div>
+  </div>
+</div>

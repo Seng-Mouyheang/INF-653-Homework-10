@@ -3,8 +3,9 @@
     class="mx-auto max-w-[500px] rounded-[24px] border border-[#755e3a2e] bg-[#ffffffb8] p-10 text-[#201a16] shadow-xl"
   >
     <div class="mb-8 text-center">
-      <h2 class="m-0 text-2xl font-bold">Login</h2>
-      <p class="mt-2 text-[#5c5149]">Please enter your credentials to continue.</p>
+      <h2 class="m-0 text-2xl font-bold">Register</h2>
+      <p class="mt-2 text-[#5c5149]">Please fill out the form below to create an
+        account.</p>
     </div>
     {{#if errorMessage}}
       <div
@@ -14,7 +15,7 @@
       </div>
     {{/if}}
 
-    <form action="/login" method="POST" class="space-y-6">
+    <form action="/register" method="POST" class="space-y-6">
 
       <div class="text-left">
         <label
@@ -50,17 +51,34 @@
         />
       </div>
 
+      <div class="text-left">
+        <label
+          for="confirmPassword"
+          class="mb-2 block text-sm font-medium text-[#201a16]"
+        >
+          Confirm Password:
+        </label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="*********"
+          required
+          class="w-full rounded-xl border border-[ #755e3a2e] bg-[#ffffffb8] p-3 text-[#201a16] transition-colors duration-200 focus:border-[#bb5a3c] focus:outline-none"
+        />
+      </div>
+
       <button
         type="submit"
         class="w-full rounded-xl bg-[#bb5a3c] p-4 font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-80"
       >
-        Login
+        Register
       </button>
     </form>
 
     <p class="text-center text-sm text-[#5c5149]">
-      Don't have an account?
-      <a href="/register" class="text-[#bb5a3c] hover:underline">Register here</a>
+      Already have an account?
+      <a href="/login" class="text-[#bb5a3c] hover:underline">Login here</a>
     </p>
   </div>
 </div>

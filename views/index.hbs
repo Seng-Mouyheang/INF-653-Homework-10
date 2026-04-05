@@ -1,3 +1,18 @@
-<h1>
-  This is home page.
-</h1>
+<div class="min-h-full flex items-center justify-center">
+  <div class="text-center">
+    <h1 class="font-serif text-5xl mb-4">Welcome to the Simple To Do List
+      Platform!
+    </h1>
+    <p class="text-lg italic text-[#5c5149] mb-8">Manage your personal tasks
+      with ease.</p>
+    <button
+      class="bg-[#bb5a3c] text-white px-6 py-3 rounded-lg hover:opacity-80 transition no-underline inline-block"
+    >
+      {{#if isLoggedIn}}
+        <a href="/dashboard" class="text-white no-underline">View Dashboard →</a>
+      {{else}}
+        <a href="/login" class="text-white no-underline">Get Started →</a>
+      {{/if}}
+    </button>
+  </div>
+</div>

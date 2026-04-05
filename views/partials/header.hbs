@@ -1,0 +1,51 @@
+<header
+  class="sticky top-0 z-50 flex items-center justify-between border-b border-[#755e3a2e] bg-[#f4efe6] px-6 py-4 font-serif backdrop-blur-md"
+>
+
+  <a
+    href="/"
+    class="ml-12 text-2xl font-bold text-[#201a16] transition-colors duration-200 hover:text-[#bb5a3c]"
+  >
+    SMHeang
+  </a>
+
+  <nav class="mr-12 flex items-center gap-8 tracking-widest uppercase">
+    <ul class="flex items-center gap-8">
+      <li>
+        <a
+          href="/"
+          class="text-[#201a16] uppercase transition-colors duration-200 hover:text-[#bb5a3c]"
+        >Home</a>
+      </li>
+      <li>
+        <a
+          href="/dashboard"
+          class="text-[#201a16] uppercase transition-colors duration-200 hover:text-[#bb5a3c]"
+        >Dashboard</a>
+      </li>
+      {{#if isLoggedIn}}
+        <li>
+          <form method="POST" action="/logout" style="display: inline;">
+            <button
+              type="submit"
+              class="text-[#201a16] uppercase transition-colors duration-200 hover:text-[#bb5a3c]"
+            >Logout</button>
+          </form>
+        </li>
+      {{else}}
+        <li>
+          <a
+            href="/login"
+            class="text-[#201a16] uppercase transition-colors duration-200 hover:text-[#bb5a3c]"
+          >Login</a>
+        </li>
+        <li>
+          <a
+            href="/register"
+            class="text-[#201a16] uppercase transition-colors duration-200 hover:text-[#bb5a3c]"
+          >Register</a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>
